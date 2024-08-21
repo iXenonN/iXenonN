@@ -1,10 +1,5 @@
 ## Hi there 👋
 
-<!--
-**iXenonN/iXenonN** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
 # 💫 About Me:
 🔭 I’m currently working on few cool projects<br>👯 I’m looking to collaborate on ai and computer vision projects <br>🤝 I’m looking for help with any better site than roboflow<br>🌱 I’m currently learning go lang<br>💬 Ask me about computer vision programming<br>⚡ Fun fact there are 26.9 million developers in the world
 
@@ -32,4 +27,3 @@ Here are some ideas to get you started:
 [![](https://visitcount.itsvg.in/api?id=iXenonN&icon=10&color=0)](https://visitcount.itsvg.in)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
--->
