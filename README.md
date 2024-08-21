@@ -1,7 +1,7 @@
 ## Hi there 👋
 
 # 💫 About Me:
-🔭 I’m currently working on few cool projects<br>👯 I’m looking to collaborate on ai and computer vision projects <br>🤝 I’m looking for help with anything that can improve me<br>🌱 I’m currently learning go lang<br>💬 Ask me about computer vision programming<br>⚡ Fun fact there are 26.9 million developers in the world
+🔭 I’m currently working on few cool projects<br>👯 I’m looking to collaborate on AI and computer vision projects <br>🤝 I’m looking for help with anything that can improve me<br>🌱 I’m currently learning go lang<br>💬 Ask me about computer vision programming<br>⚡ Fun fact there are 26.9 million developers in the world
 
 
 ## 🌐 Socials:
