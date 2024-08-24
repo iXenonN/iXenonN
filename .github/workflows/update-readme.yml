@@ -1,0 +1,31 @@
+name: Update README with YouTube Music Status
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Her 5 dakikada bir çalışır
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Fetch Currently Playing
+        run: |
+          curl -s https://yt-music-profile.onrender.com/currently-playing > currently_playing.json
+
+      - name: Generate README
+        run: |
+          CURRENTLY_PLAYING=$(jq -r '.currently_playing' < currently_playing.json)
+          PLAYING_STATUS=$(jq -r '.playing_status' < currently_playing.json)
+          THUMBNAIL_URL=$(jq -r '.thumbnail' < currently_playing.json)
+          echo "### 🎧 Now I'm Listening:" > README.md
+          echo "<div align='center'>" >> README.md
+          echo "<img src='$THUMBNAIL_URL' alt='Currently Playing Thumbnail' width='100' height='100' style='border-radius: 50%; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);'/>" >> README.md
+          echo "<h3 style='margin: 10px 0;'>**$PLAYING_STATUS:** <em>$CURRENTLY_PLAYING</em></h3>" >> README.md
+          echo "</div>" >> README.md
+          git add README.md
+          git commit -m "Update currently playing"
+          git push
