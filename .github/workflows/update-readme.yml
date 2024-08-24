@@ -19,7 +19,7 @@ jobs:
       - name: Generate README
         run: |
           git config --global user.email "alikeremergen13@gmail.com"
-          git config --global user.name "Ali Kerem Ergen"
+          git config --global user.name "iXenonN"
           git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/iXenonN/iXenonN.git
           CURRENTLY_PLAYING=$(jq -r '.currently_playing' < currently_playing.json)
           PLAYING_STATUS=$(jq -r '.playing_status' < currently_playing.json)
