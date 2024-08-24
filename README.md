@@ -7,8 +7,8 @@
 ### 🎧 Now I'm Listening:
 
 <div align="center">
-  <img src="https://yt-music-profile.onrender.com/currently-playing-thumbnail" alt="Currently Playing Thumbnail" width="100" height="100" style="border-radius: 50%; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);"/>
-  <h3 style="margin: 10px 0;">**Now Playing:** <em>Şarkı İsmi</em></h3>
+  <img src="{{ base64_thumbnail }}" alt="Currently Playing Thumbnail" width="100" height="100" style="border-radius: 50%; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);"/>
+  <h3 style="margin: 10px 0;">**{{ playing_status }}:** <em>{{ currently_playing }}</em></h3>
 </div>
 
 
