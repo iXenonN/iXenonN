@@ -16,8 +16,10 @@ jobs:
         run: |
           curl -s https://yt-music-profile.onrender.com/currently-playing > currently_playing.json
 
-      - name: Generate README
-        run: |
+     - name: Generate README
+       run: |
+          git config --global user.email "alikeremergen13@gmail.com"
+          git config --global user.name "Ali Kerem Ergen"
           CURRENTLY_PLAYING=$(jq -r '.currently_playing' < currently_playing.json)
           PLAYING_STATUS=$(jq -r '.playing_status' < currently_playing.json)
           THUMBNAIL_URL=$(jq -r '.thumbnail' < currently_playing.json)
