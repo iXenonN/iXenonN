@@ -18,9 +18,9 @@ jobs:
 
     - name: Generate README
       run: |
-        CURRENTLY_PLAYING=$(jq -r '.currently_playing' < currently_playing.json)
-        PLAYING_STATUS=$(jq -r '.playing_status' < currently_playing.json)
-        THUMBNAIL_URL=$(jq -r '.thumbnail' < currently_playing.json)
+        CURRENTLY_PLAYING=$(jq -r 'currently_playing' < currently_playing.json)
+        PLAYING_STATUS=$(jq -r 'playing_status' < currently_playing.json)
+        THUMBNAIL_URL=$(jq -r 'thumbnail' < currently_playing.json)
 
 
         cp README.md README_backup.md
@@ -34,7 +34,7 @@ jobs:
         echo "" >> README.md
         echo "![$PLAYING_STATUS]($THUMBNAIL_URL)" >> README.md
         echo "" >> README.md
-        echo "**$PLAYING_STATUS:** $CURRENTLY_PLAYING" >> README.md
+        echo "**$PLAYING_STATUS:** *$CURRENTLY_PLAYING*" >> README.md
 
     - name: Commit changes
       run: |
