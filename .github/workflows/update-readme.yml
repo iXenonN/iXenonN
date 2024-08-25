@@ -35,10 +35,17 @@ jobs:
           NEW_URL=$(cat svg_url.txt)
           sed -i "s|old-svg-url|${NEW_URL}|g" README.md
 
+      - name: Add files for commit
+        run: git add svg_url.txt firebase.json
+
       - name: Commit changes
         run: |
+          run: git commit -m "Update SVG URL"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add README.md
           git commit -m "Updated SVG URL in README"
+          
+      - name: Push changes
+        run: |
           git push
