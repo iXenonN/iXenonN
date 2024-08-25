@@ -1,46 +1,26 @@
-name: Update README with latest SVG
+name: Update README SVG
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: "*/2 * * * *" # Runs every 2 minutes
+    # Cron syntax for running every 2 minutes
+    - cron: '*/2 * * * *'
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
+      - name: Update README with new SVG link
+        run: |
+          svg_link="https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4d1f5c34-d063-490e-9c2c-9aee6ecc03d6"
+          sed -i "s|!\[Your SVG\](.*)|!\[Your SVG\](${svg_link})|" README.md
 
-    - name: Install Firebase Admin SDK
-      run: |
-        python -m pip install --upgrade pip
-        pip install firebase-admin
-
-    - name: Get latest SVG URL from Firebase
-      env:
-        FIREBASE_JSON: ${{ secrets.FIREBASE_JSON }}
-      run: |
-        python get_svg_url.py > svg_url.txt
-      id: get_svg_url
-
-    - name: Decode FIREBASE_JSON
-      run: echo "${{ secrets.FIREBASE_JSON }}"
-
-    - name: Update README.md with new SVG URL
-      run: |
-        NEW_SVG_URL=$(cat svg_url.txt)
-        sed -i "s|old-svg-url|$NEW_SVG_URL|g" README.md
-
-    - name: Commit changes
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add README.md svg_url.txt firebase.json
-        git commit -m "Update SVG URL"
-        git push
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md
+          git commit -m "Updated SVG link in README.md"
+          git push
