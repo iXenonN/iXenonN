@@ -23,7 +23,7 @@ jobs:
 
     - name: Replace SVG URL in README
       run: |
-        NEW_URL=$(gsutil signurl -d 7d /tmp/service-account-key.json gs://bucket-name/path-to-your-svg.svg)
+        NEW_URL=$(gsutil signurl -d 7d /tmp/service-account-key.json gs://what-am-i-listening/listening-on-ytmusic.svg)
         echo "New SVG URL: $NEW_URL"
         sed -i "s|old-svg-url|${NEW_URL}|g" README.md
 
