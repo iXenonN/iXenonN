@@ -1,6 +1,6 @@
 ### 🎧 Now I'm Listening:
-![Currently Playing Thumbnail](https://i.ytimg.com/vi/45xL2ftmd2Q/maxresdefault.jpg)
-*Recently Played:* Deep Swim
+![Currently Playing Thumbnail](https://i.ytimg.com/vi/SmJjB0v-6y0/maxresdefault.jpg)
+*Recently Played:* Resonance (feat. 417se)
 
 # 💫 About Me:
 🔭 I’m currently working on few cool projects<br>👯 I’m looking to collaborate on ai and computer vision projects <br>🤝 I’m looking for help with anything that can make me better<br>🌱 I’m currently learning go lang<br>💬 Ask me about computer vision programming<br>⚡ Fun fact there are 26.9 million developers in the world
