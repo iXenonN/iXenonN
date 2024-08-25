@@ -1,41 +1,32 @@
-name: Update README with YouTube Music Status
+name: Update README with SVG URL
 
 on:
-  schedule:
-    - cron: '*/5 * * * *'
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-    - name: Fetch Currently Playing
-      run: |
-        curl -s https://yt-music-profile.onrender.com/currently-playing > currently_playing.json
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
 
-    - name: Generate README
-      run: |
-        CURRENTLY_PLAYING=$(jq -r '.currently_playing' < currently_playing.json)
-        PLAYING_STATUS=$(jq -r '.playing_status' < currently_playing.json)
-        THUMBNAIL_URL=$(jq -r '.thumbnail' < currently_playing.json)
+      - name: Install dependencies
+        run: pip install -r requirements.txt
 
-        ORIGINAL_CONTENT=$(awk '/### 🎧 Now I.m Listening:/,/^$/{next}1' README.md)
+      - name: Run script to update README
+        run: python update_readme.py
 
-        NEW_CONTENT="### 🎧 Now I'm Listening:
-        ![Currently Playing Thumbnail]($THUMBNAIL_URL)
-        *${PLAYING_STATUS}:* ${CURRENTLY_PLAYING}
-
-        $ORIGINAL_CONTENT"
-
-        echo "$NEW_CONTENT" > README.md
-
-    - name: Commit changes
-      run: |
-        git config --global user.email "alikeremergen13@gmail.com"
-        git config --global user.name "Ali Kerem"
-        git add README.md
-        git commit -m "Update currently playing"
-        git push
+      - name: Commit and Push changes
+        run: |
+          git config --global user.email "alikeremergen13@gmail.com"
+          git config --global user.name "Ali Kerem"
+          git add README.md
+          git commit -m "Update README with new SVG URL"
+          git push
