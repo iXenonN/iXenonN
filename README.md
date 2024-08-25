@@ -2,7 +2,7 @@
 ![Currently Playing Thumbnail](https://i.ytimg.com/vi/GIbyKYv7hKk/maxresdefault.jpg)
 *Recently Played:* Chamber of Reflection
 
-![Your SVG Image](https://storage.googleapis.com/what-am-i-listening/listening-on-ytmusic.svg?version=1)
+![Your SVG Image](https://storage.googleapis.com/what-am-i-listening/listening-on-ytmusic.svg?)
 
 # 💫 About Me:
 🔭 I’m currently working on few cool projects<br>👯 I’m looking to collaborate on ai and computer vision projects <br>🤝 I’m looking for help with anything that can make me better<br>🌱 I’m currently learning go lang<br>💬 Ask me about computer vision programming<br>⚡ Fun fact there are 26.9 million developers in the world
