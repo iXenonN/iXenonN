@@ -23,9 +23,10 @@ jobs:
           pip install firebase-admin
 
       - name: Get latest SVG URL from Firebase
-        run: |
-          python get_svg_url.py > svg_url.txt
-        id: get_svg_url
+        run: python get_svg_url.py > svg_url.txt
+        env:
+          FIREBASE_JSON: ${{ secrets.FIREBASE_JSON }}
+
 
       - name: Update README.md with new SVG URL
         run: |
