@@ -30,7 +30,7 @@ jobs:
       id: get_svg_url
 
     - name: Decode FIREBASE_JSON
-      run: echo ${{ secrets.FIREBASE_JSON }} | base64 --decode > firebase.json
+      run: echo "${{ secrets.FIREBASE_JSON }}"
 
     - name: Update README.md with new SVG URL
       run: |
