@@ -1,39 +1,38 @@
-name: Update README with latest SVG
+name: Deploy SVG to Firebase Storage and Update README
 
 on:
-  push:
-    branches:
-      - main
   schedule:
-    - cron: '*/3 * * * *'  # Bu cron ifadesi, her 3 dakikada bir çalışması için ayarlanmıştır.
+    - cron: '*/3 * * * *' # Her 3 dakikada bir çalışır
 
 jobs:
-  update-readme:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up Firebase CLI
+    - name: Set up Firebase JSON
       run: |
-        curl -sL https://firebase.tools | bash
+        echo "${{ secrets.FIREBASE_CONFIG }}" > firebase.json
 
     - name: Deploy SVG to Firebase Storage
-      env:
-        FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       run: |
-        firebase deploy --only hosting --token "$FIREBASE_TOKEN"
+        firebase deploy --only hosting --token "${{ secrets.FIREBASE_TOKEN }}"
 
-    - name: Get SVG URL from Firebase
+    - name: Generate new SVG URL
       run: |
-        NEW_URL="https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media"
-        sed -i "s|old-svg-url|${NEW_URL}|g" README.md
+        NEW_URL=$(firebase hosting:channel:deploy temp --json | jq -r '.url') 
+        echo "New SVG URL: $NEW_URL"
+      
+    - name: Update README with new SVG URL
+      run: |
+        sed -i 's|old-svg-url|'"$NEW_URL"'|g' README.md
 
     - name: Commit changes
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         git add README.md
-        git commit -m "Update SVG URL in README"
+        git commit -m "Update README with latest SVG URL"
         git push
