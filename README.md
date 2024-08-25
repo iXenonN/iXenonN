@@ -33,3 +33,9 @@
 [![](https://visitcount.itsvg.in/api?id=iXenonN&icon=10&color=0)](https://visitcount.itsvg.in)
 
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
+
+## Now I'm Listening:
+
+![Recently Played](https://i.ytimg.com/vi/qU8vkfFZNpE/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgPCg5MA8=&rs=AOn4CLAOs6kJ2B11kJ81EXAOGWQm3yXG6Q)
+
+**Recently Played:** Hey Kids - Molina (ft. Late Verlane) (too slowed down)
