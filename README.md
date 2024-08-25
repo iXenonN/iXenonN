@@ -1,4 +1,7 @@
 ### 🎧 Now I'm Listening:
+![Currently Playing Thumbnail](https://i.ytimg.com/vi/COabVeoW7tw/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AG2CIACxgqKAgwIABABGGAgYChgMA8=&rs=AOn4CLBJtvw6BwcYTEHAQfniBhGXQnp4Fg)
+*Recently Played:* The drums - Money / slowed + reverb
+### 🎧 Now I'm Listening:
 ![Currently Playing Thumbnail](https://i.ytimg.com/vi/qU8vkfFZNpE/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgPCg5MA8=&rs=AOn4CLAOs6kJ2B11kJ81EXAOGWQm3yXG6Q)
 #### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*Recently Played:* Hey Kids - Molina (ft. Late Verlane) (too slowed down)
 
