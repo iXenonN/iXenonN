@@ -3,7 +3,7 @@ name: Update README SVG
 on:
   schedule:
     # Cron syntax for running every 2 minutes
-    - cron: '*/1 * * * *'
+    - cron: '*/2 * * * *'
 
 jobs:
   update-readme:
@@ -15,7 +15,7 @@ jobs:
       - name: Update README with new SVG link
         run: |
           svg_link="https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4d1f5c34-d063-490e-9c2c-9aee6ecc03d6"
-          sed -i "s|!\[Your SVG\](.*)|(${svg_link})|" README.md
+          sed -i "s|svg_link|${svg_link}|" README.md
 
       - name: Commit and Push changes
         run: |
