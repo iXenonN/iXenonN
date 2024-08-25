@@ -1,10 +1,3 @@
-<div style="width: 300px; background-color: #181818; border-radius: 15px; padding: 20px; text-align: center; color: white; font-family: Arial, sans-serif;">
-    <div style="font-size: 12px; color: #1DB954;">Recently played on YouTube Music</div>
-    <div style="font-size: 20px; font-weight: bold; margin-top: 10px;">{{ currently_playing }}</div>
-    <div style="font-size: 14px; color: #CCCCCC; margin-bottom: 10px;">{{ artist_name }}</div>
-    <img src="{{ thumbnail_url }}" alt="Album Art" style="width: 100%; border-radius: 10px;">
-</div>
-
 
 # 💫 About Me:
 🔭 I’m currently working on few cool projects<br>👯 I’m looking to collaborate on ai and computer vision projects <br>🤝 I’m looking for help with anything that can make me better<br>🌱 I’m currently learning go lang<br>💬 Ask me about computer vision programming<br>⚡ Fun fact there are 26.9 million developers in the world
