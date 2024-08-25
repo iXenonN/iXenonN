@@ -16,21 +16,28 @@ jobs:
         run: |
           curl -s https://yt-music-profile.onrender.com/currently-playing > currently_playing.json
 
+      - name: Generate Thumbnail Image
+        run: |
+          echo $THUMBNAIL | base64 -d > thumbnail.jpg
+
       - name: Generate README
         run: |
           CURRENTLY_PLAYING=$(jq -r '.currently_playing' < currently_playing.json)
           PLAYING_STATUS=$(jq -r '.playing_status' < currently_playing.json)
-          THUMBNAIL_URL=$(jq -r '.thumbnail' < currently_playing.json)
           ORIGINAL_CONTENT=$(cat README.md)
           
           NEW_CONTENT="### 🎧 Now I'm Listening:
           ![Currently Playing Thumbnail]($THUMBNAIL_URL)
           *${PLAYING_STATUS}:* ${CURRENTLY_PLAYING}
           $ORIGINAL_CONTENT"
-          
+
+          echo "# Now I'm Listening:" > README.md
+          echo "![Currently Playing Thumbnail](thumbnail.jpg)" >> README.md
+          echo "**$PLAYING_STATUS:** *$CURRENTLY_PLAYING*" >> README.md 
           echo "$NEW_CONTENT" > README.md
           git config --global user.email "alikeremergen13@gmail.com"
           git config --global user.name "Ali Kerem"
           git add README.md
+          git add README.md thumbnail.jpg
           git commit -m "Update currently playing"
           git push
