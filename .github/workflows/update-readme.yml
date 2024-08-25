@@ -18,13 +18,13 @@ jobs:
         env:
           GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
         run: |
-          echo "${GOOGLE_APPLICATION_CREDENTIALS}" > /tmp/service-account-key.json
+          echo "$GOOGLE_APPLICATION_CREDENTIALS" > /tmp/service-account-key.json
           export GOOGLE_APPLICATION_CREDENTIALS="/tmp/service-account-key.json"
 
       - name: Replace SVG URL in README
         run: |
-          NEW_URL=$(gsutil signurl -d 7d /tmp/service-account-key.json gs://what-am-i-listening/listening-on-ytmusic.svg -l US)
-          echo "New SVG URL: ${NEW_URL}"
+          NEW_URL=$(gsutil signurl -d 7d gs://what-am-i-listening/listening-on-ytmusic.svg)
+          echo "New SVG URL: $NEW_URL"
           sed -i "s|old-svg-url|${NEW_URL}|g" README.md
 
       - name: Commit changes
@@ -32,5 +32,5 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add README.md
-          git commit -m "Update SVG URL in README"
-          git push
+          git commit -m "Update README with new SVG link"
+          git push origin main
