@@ -1,43 +1,42 @@
 name: Update README with latest SVG
 
 on:
-  workflow_dispatch:
   schedule:
-    - cron: '*/2 * * * *'  # Runs every 2 minutes
+    - cron: "*/2 * * * *" # Runs every 2 minutes
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
 
-      - name: Install Firebase Admin SDK
-        run: |
-          python -m pip install --upgrade pip
-          pip install firebase-admin
+    - name: Install Firebase Admin SDK
+      run: |
+        python -m pip install --upgrade pip
+        pip install firebase-admin
 
-      - name: Get latest SVG URL from Firebase
-        env:
-          FIREBASE_JSON: ${{ secrets.FIREBASE_JSON }}
-        run: |
-          python get_svg_url.py > svg_url.txt
-        id: get_svg_url
+    - name: Get latest SVG URL from Firebase
+      env:
+        FIREBASE_JSON: ${{ secrets.FIREBASE_JSON }}
+      run: |
+        python get_svg_url.py > svg_url.txt
+      id: get_svg_url
 
-      - name: Update README.md with new SVG URL
-        run: |
-          svg_url=$(cat svg_url.txt)
-          sed -i "s|old-svg-url|${svg_url}|g" README.md
+    - name: Update README.md with new SVG URL
+      run: |
+        NEW_SVG_URL=$(cat svg_url.txt)
+        sed -i "s|old-svg-url|$NEW_SVG_URL|g" README.md
 
-      - name: Commit changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          git add README.md
-          git commit -m "Update SVG URL"
-          git push
+    - name: Commit changes
+      run: |
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git config --local user.name "github-actions[bot]"
+        git add README.md svg_url.txt firebase.json
+        git commit -m "Update SVG URL"
+        git push
