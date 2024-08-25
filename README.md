@@ -1,4 +1,7 @@
 ### 🎧 Now I'm Listening:
+![Currently Playing Thumbnail](https://i.ytimg.com/vi/qU8vkfFZNpE/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGHIgPCg5MA8=&rs=AOn4CLAOs6kJ2B11kJ81EXAOGWQm3yXG6Q)
+*Recently Played:* Hey Kids - Molina (ft. Late Verlane) (too slowed down)
+### 🎧 Now I'm Listening:
 ![Currently Playing Thumbnail](THUMBNAIL_URL)
 
 **{{ PLAYING_STATUS }}:** {{ CURRENTLY_PLAYING }}
