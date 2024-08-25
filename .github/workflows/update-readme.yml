@@ -23,7 +23,7 @@ jobs:
           THUMBNAIL_URL=$(jq -r '.thumbnail' < currently_playing.json)
           ORIGINAL_CONTENT=$(cat README.md)
           
-          NEW_CONTENT="## Now I'm Listening:
+          NEW_CONTENT="### 🎧 Now I'm Listening:
           ![Currently Playing Thumbnail]($THUMBNAIL_URL)
           *${PLAYING_STATUS}:* ${CURRENTLY_PLAYING}
           $ORIGINAL_CONTENT"
