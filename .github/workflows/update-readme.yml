@@ -22,10 +22,8 @@ jobs:
         PLAYING_STATUS=$(jq -r '.playing_status' < currently_playing.json)
         THUMBNAIL_URL=$(jq -r '.thumbnail' < currently_playing.json)
 
-        # Eski "Now I'm Listening" bölümünü kaldır
         ORIGINAL_CONTENT=$(awk '/### 🎧 Now I.m Listening:/,/^$/{next}1' README.md)
 
-        # Yeni içeriği oluştur
         NEW_CONTENT="### 🎧 Now I'm Listening:
         ![Currently Playing Thumbnail]($THUMBNAIL_URL)
         *${PLAYING_STATUS}:* ${CURRENTLY_PLAYING}
