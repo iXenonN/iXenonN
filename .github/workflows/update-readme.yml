@@ -2,7 +2,7 @@ name: Update README with YouTube Music Status
 
 on:
   schedule:
-    - cron: '*/3 * * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
