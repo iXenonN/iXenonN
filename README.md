@@ -2,7 +2,7 @@
 ![Currently Playing Thumbnail](https://i.ytimg.com/vi/GIbyKYv7hKk/maxresdefault.jpg)
 *Recently Played:* Chamber of Reflection
 
-![SVG Image](https://raw.githubusercontent.com/iXenonN/iXenonN/main/YouTube_Music_UI_BAR_UPDATED.svg)
+![Your SVG Image][(https://storage.googleapis.com/what-am-i-listening/listening-on-ytmusic.svg)]
 
 
 # 💫 About Me:
