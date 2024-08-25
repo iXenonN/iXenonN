@@ -1,6 +1,6 @@
 ### 🎧 Now I'm Listening:
-![Currently Playing Thumbnail](https://i.ytimg.com/vi/COabVeoW7tw/hqdefault.jpg?sqp=-oaymwEmCOADEOgC8quKqQMa8AEB-AG2CIACxgqKAgwIABABGGAgYChgMA8=&rs=AOn4CLBJtvw6BwcYTEHAQfniBhGXQnp4Fg)
-*Recently Played:* The drums - Money / slowed + reverb
+![Currently Playing Thumbnail](https://i.ytimg.com/vi/Bn8493S-wU0/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH0CYAC0AWKAgwIABABGEUgTihlMA8=&rs=AOn4CLDtgGdtB_CpSw0IV3HIyWy9r4js-w)
+*Recently Played:* lebanon hanover - gallowdance (slowed n reverb)
 
 # 💫 About Me:
 🔭 I’m currently working on few cool projects<br>👯 I’m looking to collaborate on ai and computer vision projects <br>🤝 I’m looking for help with anything that can make me better<br>🌱 I’m currently learning go lang<br>💬 Ask me about computer vision programming<br>⚡ Fun fact there are 26.9 million developers in the world
