@@ -3,7 +3,7 @@ name: Update README with latest SVG
 on:
   workflow_dispatch:
   schedule:
-    - cron: "*/2 * * * *" # Runs every 2 minutes
+    - cron: '*/2 * * * *'  # Runs every 2 minutes
 
 jobs:
   update-readme:
@@ -26,26 +26,18 @@ jobs:
         env:
           FIREBASE_JSON: ${{ secrets.FIREBASE_JSON }}
         run: |
-          echo "${FIREBASE_JSON}" > firebase.json
           python get_svg_url.py > svg_url.txt
         id: get_svg_url
 
       - name: Update README.md with new SVG URL
         run: |
-          NEW_URL=$(cat svg_url.txt)
-          sed -i "s|old-svg-url|${NEW_URL}|g" README.md
-
-      - name: Add files for commit
-        run: git add svg_url.txt firebase.json
+          svg_url=$(cat svg_url.txt)
+          sed -i "s|old-svg-url|${svg_url}|g" README.md
 
       - name: Commit changes
         run: |
-          run: git commit -m "Update SVG URL"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add README.md
-          git commit -m "Updated SVG URL in README"
-          
-      - name: Push changes
-        run: |
+          git commit -m "Update SVG URL"
           git push
