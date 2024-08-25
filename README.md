@@ -2,7 +2,7 @@
 ![Currently Playing Thumbnail](https://i.ytimg.com/vi/GIbyKYv7hKk/maxresdefault.jpg)
 *Recently Played:* Chamber of Reflection
 
-[![Your SVG Image](https://storage.googleapis.com/what-am-i-listening/listening-on-ytmusic.svg)
+![Your SVG Image](https://storage.googleapis.com/what-am-i-listening/listening-on-ytmusic.svg)
 
 
 # 💫 About Me:
