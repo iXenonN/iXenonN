@@ -3,10 +3,11 @@
 
 ### 🎧 Now I'm Listening:
 
-<div align='center'>
-  <img src='{{ THUMBNAIL_URL }}' alt='Currently Playing Thumbnail' width='100' height='100' style='border-radius: 50%; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);'/>
-  <h3 style='margin: 10px 0;'>**{{ PLAYING_STATUS }}:** <em>{{ CURRENTLY_PLAYING }}</em></h3>
+<div align="center">
+  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAAAAAA..." alt="Currently Playing Thumbnail" width="100" height="100" style="border-radius: 50%; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);"/>
+  <h3 style="margin: 10px 0;">**{{ playing_status }}:** <em>{{ currently_playing }}</em></h3>
 </div>
+
 
 
 ## 🌐 Socials:
