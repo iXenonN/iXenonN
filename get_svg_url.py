@@ -1,19 +1,16 @@
+import os
 import firebase_admin
 from firebase_admin import credentials, storage
 
-# Initialize Firebase
-cred = credentials.Certificate(FIREBASE_JSON)
-firebase_admin.initialize_app(cred, {
-    'storageBucket': 'yt-music-profile.appspot.com'
-})
+firebase_json_path = "/tmp/firebase_key.json"
+with open(firebase_json_path, "w") as f:
+    f.write(os.environ["FIREBASE_JSON"])
 
-# Get a reference to the storage bucket
+cred = credentials.Certificate(firebase_json_path)
+firebase_admin.initialize_app(cred, {"storageBucket": "yt-music-profile.appspot.com"})
+
 bucket = storage.bucket()
+blob = bucket.blob("listening-on-ytmusic.svg")
 
-# Specify the SVG file name
-blob = bucket.blob('listening-on-yt-music.svg')
-
-# Generate a download URL
-svg_url = blob.generate_signed_url(timedelta(minutes=10))
-
-print(f"::set-output name=svg_url::{svg_url}")
+public_url = blob.generate_signed_url(datetime.timedelta(seconds=300), method="GET")
+print("SVG dosyasının URL'si:", public_url)
