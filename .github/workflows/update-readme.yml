@@ -24,21 +24,19 @@ jobs:
 
       - name: Get latest SVG URL from Firebase
         run: |
-          echo "${{ secrets.FIREBASE_JSON }}" > /tmp/firebase_key.json
           python get_svg_url.py > svg_url.txt
-        env:
-          FIREBASE_JSON: ${{ secrets.FIREBASE_JSON }}
+        id: get_svg_url
 
       - name: Update README.md with new SVG URL
         run: |
-          svg_url=$(cat svg_url.txt)
-          sed -i "s|old-svg-url|${svg_url}|g" README.md
+          old_svg_url=".*\((http.*\.svg)\).*"
+          new_svg_url=$(cat svg_url.txt)
+          sed -i "s|\$old_svg_url|![$new_svg_url]|g" README.md
 
       - name: Commit changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add README.md
-          git commit -m "Update README with latest SVG"
+          git commit -m "Update SVG URL in README"
           git push
-
