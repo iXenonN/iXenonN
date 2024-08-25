@@ -7,7 +7,7 @@
 # 💫 About Me:
 🔭 I’m currently working on few cool projects<br>👯 I’m looking to collaborate on ai and computer vision projects <br>🤝 I’m looking for help with anything that can make me better<br>🌱 I’m currently learning go lang<br>💬 Ask me about computer vision programming<br>⚡ Fun fact there are 26.9 million developers in the world
 
-![Your SVG](https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media![Your SVG](https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4d1f5c34-d063-490e-9c2c-9aee6ecc03d6)token=4d1f5c34-d063-490e-9c2c-9aee6ecc03d6)
+![Your SVG]((https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4d1f5c34-d063-490e-9c2c-9aee6ecc03d6)token=4d1f5c34-d063-490e-9c2c-9aee6ecc03d6)
 
 ## 🌐 Socials:
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/505634291150094336) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/ali-kerem-ergen-60b94a274/) 
