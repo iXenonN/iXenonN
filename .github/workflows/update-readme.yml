@@ -1,27 +1,26 @@
-name: Update README SVG
+name: Update SVG in README
 
 on:
-  workflow_dispatch:
   schedule:
-    # Cron syntax for running every 2 minutes
-    - cron: '*/2 * * * *'
+    - cron: '*/2 * * * *' # Her 2 dakikada bir çalışır
 
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Update README with the same SVG link
-        run: |
-          svg_link="https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4d1f5c34-d063-490e-9c2c-9aee6ecc03d6"
-          sed -i "s|!\[Your SVG\](https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=.*)|!\[Your SVG\](${svg_link})|" README.md
+    - name: Update README.md with new SVG link
+      run: |
+        sed -i '/!\[Your SVG\](https:\/\/firebasestorage.googleapis.com\/v0\/b\/yt-music-profile.appspot.com\/o\/listening-on-ytmusic.svg?alt=media&token=4d1f5c34-d063-490e-9c2c-9aee6ecc03d6)/d' README.md
+        echo "![Your SVG](https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4d1f5c34-d063-490e-9c2c-9aee6ecc03d6)" >> README.md
 
-      - name: Commit and Push changes
-        run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add README.md
-          git commit -m "Refreshed SVG link in README.md"
-          git push
+    - name: Commit changes
+      run: |
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+        git add README.md
+        git commit -m "Update SVG link in README"
+        git push
