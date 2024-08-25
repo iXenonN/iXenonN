@@ -16,9 +16,9 @@ jobs:
 
       - name: Set up Google Cloud credentials
         env:
-          GOOGLE_APPLICATION_CREDENTIALS: /tmp/service-account-key.json
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
         run: |
-          echo "${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}" > /tmp/service-account-key.json
+          echo "$GOOGLE_APPLICATION_CREDENTIALS" > /tmp/service-account-key.json
           export GOOGLE_APPLICATION_CREDENTIALS="/tmp/service-account-key.json"
 
       - name: Replace SVG URL in README
