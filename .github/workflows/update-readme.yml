@@ -1,6 +1,7 @@
 name: Update README SVG
 
 on:
+  workflow_dispatch:
   schedule:
     # Cron syntax for running every 2 minutes
     - cron: '*/2 * * * *'
@@ -12,15 +13,15 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Update README with new SVG link
+      - name: Update README with the same SVG link
         run: |
           svg_link="https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4d1f5c34-d063-490e-9c2c-9aee6ecc03d6"
-          sed -i "s|svg_link|${svg_link}|" README.md
+          sed -i "s|!\[Your SVG\](https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=.*)|!\[Your SVG\](${svg_link})|" README.md
 
       - name: Commit and Push changes
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add README.md
-          git commit -m "Updated SVG link in README.md"
+          git commit -m "Refreshed SVG link in README.md"
           git push
