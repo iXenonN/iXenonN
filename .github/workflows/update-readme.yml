@@ -1,6 +1,7 @@
 name: Update SVG in README
 
 on:
+  workflow_dispatch:
   schedule:
     - cron: '*/2 * * * *' # Her 2 dakikada bir çalışır
 
