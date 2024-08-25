@@ -9,33 +9,36 @@ jobs:
   update-readme:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
 
-    - name: Install Firebase Admin SDK
-      run: |
-        python -m pip install --upgrade pip
-        pip install firebase-admin
+      - name: Install Firebase Admin SDK
+        run: |
+          python -m pip install --upgrade pip
+          pip install firebase-admin
 
-    - name: Get latest SVG URL from Firebase
-      run: |
-        python get_svg_url.py > svg_url.txt
-        echo "::set-output name=svg_url::$(cat svg_url.txt | tail -n 1)"
-      id: get_svg_url
+      - name: Get latest SVG URL from Firebase
+        run: |
+          echo "${{ secrets.FIREBASE_JSON }}" > /tmp/firebase_key.json
+          python get_svg_url.py > svg_url.txt
+        env:
+          FIREBASE_JSON: ${{ secrets.FIREBASE_JSON }}
 
-    - name: Update README.md with new SVG URL
-      run: |
-        sed -i "s|old-svg-url|${{ steps.get_svg_url.outputs.svg_url }}|g" README.md
+      - name: Update README.md with new SVG URL
+        run: |
+          svg_url=$(cat svg_url.txt)
+          sed -i "s|old-svg-url|${svg_url}|g" README.md
 
-    - name: Commit changes
-      run: |
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git config --local user.name "github-actions[bot]"
-        git add README.md
-        git commit -m "Update SVG URL in README"
-        git push
+      - name: Commit changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git commit -m "Update README with latest SVG"
+          git push
+
