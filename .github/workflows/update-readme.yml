@@ -21,14 +21,21 @@ jobs:
         CURRENTLY_PLAYING=$(jq -r '.currently_playing' < currently_playing.json)
         PLAYING_STATUS=$(jq -r '.playing_status' < currently_playing.json)
         THUMBNAIL_URL=$(jq -r '.thumbnail' < currently_playing.json)
-        ORIGINAL_CONTENT=$(cat README.md)
-          
+
+        # Eski "Now I'm Listening" bölümünü kaldır
+        ORIGINAL_CONTENT=$(awk '/### 🎧 Now I.m Listening:/,/^$/{next}1' README.md)
+
+        # Yeni içeriği oluştur
         NEW_CONTENT="### 🎧 Now I'm Listening:
         ![Currently Playing Thumbnail]($THUMBNAIL_URL)
         *${PLAYING_STATUS}:* ${CURRENTLY_PLAYING}
+
         $ORIGINAL_CONTENT"
-          
+
         echo "$NEW_CONTENT" > README.md
+
+    - name: Commit changes
+      run: |
         git config --global user.email "alikeremergen13@gmail.com"
         git config --global user.name "Ali Kerem"
         git add README.md
