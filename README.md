@@ -12,7 +12,7 @@
 # 🎧 Now I'm Listening:
 ![What Am I Listening](https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=960b7656-574a-45b0-93ae-3c9823750193?v=17)
 
-⬤ Inspired From 
+⬤ Inspired From: <br>
 • https://github.com/kittinan <br>
 • https://github.com/natemoo-re <br>
 • Thanks https://github.com/sigma67 for creating the unoffical YouTube Music api.<br>
