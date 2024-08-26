@@ -5,7 +5,7 @@
 <!-- ![What Am I Listening](https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4ff7b48b-7772-47ab-9892-cf28c29393b4) -->
 
 <p align="left">
-  <img width="320" height="445" src="https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4d1f5c34-d063-490e-9c2c-9aee6ecc03d6">
+  <img width="320" height="445" src="https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=960b7656-574a-45b0-93ae-3c9823750193?v=1">
 </p>
 
 <p align="left">
