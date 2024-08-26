@@ -36,4 +36,6 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git add README.md
           git commit -m "Update README with new SVG link"
+          git commit --allow-empty -m "force commit"
+          git push
           git push origin main
