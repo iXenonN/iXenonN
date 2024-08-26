@@ -28,7 +28,7 @@ jobs:
 
       - name: Update README with SVG
         run: |
-          python script_to_update_readme.py  # Replace with your script filename
+          python update_readme.py
 
       - name: Commit and push changes
         run: |
