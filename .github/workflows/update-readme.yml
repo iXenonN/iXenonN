@@ -6,7 +6,7 @@ on:
       - main
   schedule:
     - cron: '*/2 * * * *'  # Runs every 5 minutes
-  workflow_dispatch:  # Allows manual trigger from GitHub Actions
+  workflow_dispatch: 
 
 jobs:
   update-readme:
