@@ -6,10 +6,8 @@
 
 <iframe src="https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4ff7b48b-7772-47ab-9892-cf28c29393b4" width="600" height="400"></iframe>
 
-<img src="https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4ff7b48b-7772-47ab-9892-cf28c29393b4"/>
+<img src="https://spotify-github-profile.kittinanx.com/api/view?uid=21jsj34glwsu3dboqjpqzm2sa&cover_image=true&theme=default&bar_color=ff0000&bar_color_cover=true"/>
 
-<div style="background-image: url('https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4ff7b48b-7772-47ab-9892-cf28c29393b4'); width: 100px; height: 100px;">
-</div>
 
 # 💫 About Me:
 🔭 I’m currently working on few cool projects<br>👯 I’m looking to collaborate on ai and computer vision projects <br>🤝 I’m looking for help with anything that can make me better<br>🌱 I’m currently learning go lang<br>💬 Ask me about computer vision programming<br>⚡ Fun fact there are 26.9 million developers in the world
