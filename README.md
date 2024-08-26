@@ -3,7 +3,7 @@
 ![Currently Playing Thumbnail](https://i.ytimg.com/vi/GIbyKYv7hKk/maxresdefault.jpg)
 *Recently Played:* Chamber of Reflection -->
 
-<!-- ![What Am I Listening](https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4ff7b48b-7772-47ab-9892-cf28c29393b4) -->
+
 
 
 # 💫 About Me:
@@ -14,6 +14,7 @@
   <img width="320" height="445" src="https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=960b7656-574a-45b0-93ae-3c9823750193?v=2">
 </p> 
 
+![What Am I Listening](https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4ff7b48b-7772-47ab-9892-cf28c29393b4)
 
 ## 🌐 Socials:
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/505634291150094336) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/ali-kerem-ergen-60b94a274/) 
