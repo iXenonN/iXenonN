@@ -15,16 +15,17 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
+      
+
     - name: Increment SVG Version
       id: increment_version
       run: |
-        # Read the current version from the README.md file
         current_version=$(grep -oP '(?<=v=)\d+' README.md)
-        
-        # Increment the version number
+        if [ -z "$current_version" ]; then
+          echo "Version not found in README.md"
+          exit 1
+        fi       
         new_version=$((current_version + 1))
-
-        # Update the README.md with the new version
         sed -i "s/v=$current_version/v=$new_version/" README.md
 
     - name: Commit Changes
