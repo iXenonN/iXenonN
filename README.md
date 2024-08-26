@@ -4,9 +4,9 @@
 
 <!-- ![What Am I Listening](https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4ff7b48b-7772-47ab-9892-cf28c29393b4) -->
 
-<iframe src="https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4ff7b48b-7772-47ab-9892-cf28c29393b4" width="600" height="400"></iframe>
-
-<img src="https://spotify-github-profile.kittinanx.com/api/view?uid=21jsj34glwsu3dboqjpqzm2sa&cover_image=true&theme=default&bar_color=ff0000&bar_color_cover=true"/>
+<p align="left">
+  <img width="320" height="445" src="https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=4ff7b48b-7772-47ab-9892-cf28c29393b4">
+</p>
 
 
 # 💫 About Me:
