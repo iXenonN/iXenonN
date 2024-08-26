@@ -1,35 +1,39 @@
-name: Update SVG Version
+name: Update README with SVG Link
 
 on:
   push:
-    paths:
-      - 'https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=960b7656-574a-45b0-93ae-3c9823750193'
+    branches:
+      - main
+  schedule:
+    - cron: '*/2 * * * *'  # Runs every 5 minutes
+  workflow_dispatch:  # Allows manual trigger from GitHub Actions
 
 jobs:
-  update-version:
+  update-readme:
     runs-on: ubuntu-latest
+
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
+      - name: Checkout Repository
+        uses: actions/checkout@v2
 
-    - name: Increment SVG Version
-      id: increment_version
-      run: |
-        current_version=$(grep -oP '(?<=v=)\d+' README.md)
-        
-        new_version=$((current_version + 1))
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
 
-        sed -i "s/v=$current_version/v=$new_version/" README.md
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests  # Add any other dependencies you need
 
-    - name: Commit Changes
-      run: |
-        git config --local user.email "alikeremergen13@gmail.com"
-        git config --local user.name "Ali Kerem"
-        git add README.md
-        git commit -m "Increment SVG version to v${{ steps.increment_version.outputs.new_version }}"
+      - name: Update README with SVG
+        run: |
+          python script_to_update_readme.py  # Replace with your script filename
 
-    - name: Push Changes
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: main
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git commit -m "Update README with new SVG link"
+          git push origin main
