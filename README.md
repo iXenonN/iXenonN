@@ -13,9 +13,9 @@
 ![What Am I Listening](https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=960b7656-574a-45b0-93ae-3c9823750193?v=16)
 
 ⬤ Inspired From 
-• https://github.com/kittinan 
-• https://github.com/natemoo-re 
-• Thanks https://github.com/sigma67 for creating the unoffical YouTube Music api.
+• https://github.com/kittinan <br>
+• https://github.com/natemoo-re <br>
+• Thanks https://github.com/sigma67 for creating the unoffical YouTube Music api.<br>
 
 ## 🌐 Socials:
 [![Discord](https://img.shields.io/badge/Discord-%237289DA.svg?logo=discord&logoColor=white)](https://discord.gg/505634291150094336) [![LinkedIn](https://img.shields.io/badge/LinkedIn-%230077B5.svg?logo=linkedin&logoColor=white)](https://linkedin.com/in/ali-kerem-ergen-60b94a274/) 
