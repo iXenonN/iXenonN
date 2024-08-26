@@ -37,3 +37,9 @@ jobs:
           git add README.md
           git commit -m "Update README with new SVG link"
           git push origin main
+          
+          if git diff-index --quiet HEAD --; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
