@@ -2,9 +2,12 @@ name: Update SVG Version
 
 on:
   push:
-    paths:
-      - 'https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=3976a282-354e-4a10-a77f-5dba32fc3921'
-
+    branches:
+      - main
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+  workflow_dispatch:
+  
 jobs:
   update-version:
     runs-on: ubuntu-latest
