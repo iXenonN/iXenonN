@@ -29,8 +29,8 @@ jobs:
 
     - name: Commit Changes
       run: |
-        git config --local user.email "your-email@example.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "alikeremergen13@gmail.com"
+        git config --local user.name "Ali Kerem"
         git add README.md
         git commit -m "Increment SVG version to v${{ steps.increment_version.outputs.new_version }}"
 
