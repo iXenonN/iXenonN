@@ -1,43 +1,38 @@
-name: Update README with SVG Link
+name: Update SVG Version
 
 on:
   push:
-    branches:
-      - main
-  schedule:
-    - cron: '*/2 * * * *'  # Runs every 2 minutes
-  workflow_dispatch: 
+    paths:
+      - 'https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=3976a282-354e-4a10-a77f-5dba32fc3921'
 
 jobs:
-  update-readme:
+  update-version:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.x'
+    - name: Increment SVG Version
+      id: increment_version
+      run: |
+        # Read the current version from the README.md file
+        current_version=$(grep -oP '(?<=v=)\d+' README.md)
+        
+        # Increment the version number
+        new_version=$((current_version + 1))
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install requests  # Add any other dependencies you need
+        # Update the README.md with the new version
+        sed -i "s/v=$current_version/v=$new_version/" README.md
 
-      - name: Update README with SVG
-        run: |
-          python update_readme.py
+    - name: Commit Changes
+      run: |
+        git config --local user.email "your-email@example.com"
+        git config --local user.name "GitHub Action"
+        git add README.md
+        git commit -m "Increment SVG version to v${{ steps.increment_version.outputs.new_version }}"
 
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-          git config --local user.name "github-actions[bot]"
-          if [ -n "$(git status --porcelain)" ]; then
-            git add README.md
-            git commit -m "Update README with SVG Link"
-            git push
-          else
-            echo "No changes to commit"
-          fi
+    - name: Push Changes
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: main
