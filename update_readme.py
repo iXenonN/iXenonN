@@ -22,8 +22,3 @@ def update_readme_with_svg():
 
 if __name__ == "__main__":
     update_readme_with_svg()
-
-if git diff-index --quiet HEAD --; then
-    echo "No changes to commit"
-    exit 0
-fi
