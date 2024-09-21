@@ -3,7 +3,7 @@
 ![Currently Playing Thumbnail](https://i.ytimg.com/vi/GIbyKYv7hKk/maxresdefault.jpg)
 *Recently Played:* Chamber of Reflection -->
 
-<a href="https://imgbb.com/"><img align="center" src="https://i.ibb.co/znCkDC5/explore-computer-vision-microsoft-azure-social.png" alt="explore-computer-vision-microsoft-azure-social" border="0"></a><br /><a target='_blank' href='https://tr.imgbb.com/'>gif png yapma</a><br />
+<a align="center" href="https://imgbb.com/"><img src="https://i.ibb.co/znCkDC5/explore-computer-vision-microsoft-azure-social.png" alt="explore-computer-vision-microsoft-azure-social" border="0"></a><br /><br />
 <h1 align="center">test</h1>
 
 # 💫 About Me:
