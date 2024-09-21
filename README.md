@@ -3,8 +3,7 @@
 ![Currently Playing Thumbnail](https://i.ytimg.com/vi/GIbyKYv7hKk/maxresdefault.jpg)
 *Recently Played:* Chamber of Reflection -->
 
-<a align="center" href="https://imgbb.com/"><img src="https://i.ibb.co/znCkDC5/explore-computer-vision-microsoft-azure-social.png" alt="explore-computer-vision-microsoft-azure-social" border="0"></a><br /><br />
-<h1 align="center">test</h1>
+
 
 # 💫 About Me:
 🔭 I’m currently working on few cool projects<br>👯 I’m looking to collaborate on ai and computer vision projects <br>🤝 I’m looking for help with anything that can make me better<br>🌱 I’m currently learning go lang<br>💬 Ask me about computer vision programming<br>⚡ Fun fact there are 26.9 million developers in the world
