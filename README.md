@@ -3,7 +3,7 @@
 ![Currently Playing Thumbnail](https://i.ytimg.com/vi/GIbyKYv7hKk/maxresdefault.jpg)
 *Recently Played:* Chamber of Reflection -->
 
-![MasterHead](https://i.ibb.co/znCkDC5/explore-computer-vision-microsoft-azure-social.png)
+[![MasterHead](https://i.ibb.co/znCkDC5/explore-computer-vision-microsoft-azure-social.png)]
 
 
 # 💫 About Me:
