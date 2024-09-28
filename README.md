@@ -26,7 +26,6 @@
 </p>
 <p  align="center"> 
   <img src="https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white" height="25"/>
-  &nbsp;
   <img src="https://img.shields.io/badge/c%23-%23239120.svg?style=for-the-badge&logo=csharp&logoColor=white" height="25"/>
 </p>
 <p  align="center"> 
