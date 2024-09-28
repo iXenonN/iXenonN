@@ -12,12 +12,12 @@
 # 
 ![What Am I Listening](https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=960b7656-574a-45b0-93ae-3c9823750193?v=4302)
 
-<p  align="center">
-  <a ⬤ Inspired From: >
-  <img src="https://img.shields.io/badge/GitHub-black?style=flat&logo=GitHub" href="https://github.com/kittinan" height="25"/>
-  • natemoo-re [![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=GitHub)](https://github.com/natemoo-re) <br>
-  • Thanks to sigma67 [![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=GitHub)](https://github.com/sigma67)  for creating the unoffical YouTube Music api.   <br>
-</p>
+⬤ Inspired From: <br>
+• kittinan [![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=GitHub)](https://github.com/kittinan) <br>
+• natemoo-re [![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=GitHub)](https://github.com/natemoo-re) <br>
+• Thanks to sigma67 [![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=GitHub)](https://github.com/sigma67)  for creating the unoffical YouTube Music api. <br>
+
+
 
 
 ## 🌐 Socials:
