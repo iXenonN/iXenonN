@@ -10,8 +10,7 @@
 🔭 I’m currently working on few cool projects<br>👯 I’m looking to collaborate on ai and computer vision projects <br>🤝 I’m looking for help with anything that can make me better<br>🌱 I’m currently learning GoLang<br>💬 Ask me about computer vision programming<br>⚡ Fun fact there are 26.9 million developers in the world
 
 # 🍎 Support Me:
-buymeacoffee.com/ixenon
-Here is my buy me a coffee link if you want to support me financially otherwise you can star my repos :)
+buymeacoffee.com/ixenon<br>Here is my buy me a coffee link if you want to support me financially otherwise you can star my repos :)
 
 
 # 
