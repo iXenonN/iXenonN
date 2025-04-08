@@ -1,10 +1,14 @@
 name: Update SVG Version
 
+
+
 on:
   push:
     branches:
       - main
   # Runs every 2 minutes
+  schedule:
+    - cron: '*/2 * * * *'
   workflow_dispatch:
   
 jobs:
