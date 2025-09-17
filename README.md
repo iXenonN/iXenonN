@@ -13,7 +13,7 @@
 buymeacoffee.com/ixenon<br>Here is my buy me a coffee link if you want to support me financially otherwise you can star my repos :)
 
 # 
-![What Am I Listening](https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=960b7656-574a-45b0-93ae-3c9823750193?v=32341)
+![What Am I Listening](https://firebasestorage.googleapis.com/v0/b/yt-music-profile.appspot.com/o/listening-on-ytmusic.svg?alt=media&token=960b7656-574a-45b0-93ae-3c9823750193?v=32342)
 
 ### ⬤ Inspired From: <br>
 • kittinan [![GitHub](https://img.shields.io/badge/GitHub-black?style=flat&logo=GitHub)](https://github.com/kittinan) <br>
